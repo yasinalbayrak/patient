@@ -47,18 +47,24 @@ tr:nth-child(even) {
   background-color: #dddddd;
   background-color: #e4e4e4;
   background-color: #efecec;
+  background-color:#82C3EC;
+  background-color: #e4e4e4;
+  background-color: #efecec;
 }
 tr:nth-child(odd) {
   background-color: white;
+  
 }
 tr:nth-child(1) {
   background-color: #76a5af;
-  
-
-  
-  
+  background-color: rgb(105, 0, 166);
+  color: #82C3EC;
+  font: weight 500px;
+  font-style: italic;
 }
-
+tr.a:hover{
+  background-color: coral;
+}
 </style>
 
 </head>
@@ -93,7 +99,7 @@ while($row = mysqli_fetch_assoc($result))
     else  $class = "class='ano'";
          
 
-  echo "<tr>" . "<th>" . $id . "</th>" . "<th>" . $sname . "</th>" . "<th>" . $age . "</th>" . "<th> <p ".  $class. " >".$P_allergicreaction . "</p></th>"."<th>". $p_diagnosis . "</th>"."<th>". $p_address. "</th>"."<th>". $gender. "</th>"."</tr>";
+  echo "<tr class='a'>" . "<th>" . $id . "</th>" . "<th>" . $sname . "</th>" . "<th>" . $age . "</th>" . "<th> <p ".  $class. " >".$P_allergicreaction . "</p></th>"."<th>". $p_diagnosis . "</th>"."<th>". $p_address. "</th>"."<th>". $gender. "</th>"."</tr>";
 }
 
 ?>
