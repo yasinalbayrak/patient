@@ -78,7 +78,9 @@ b{
 <b>Welcome to the Hospital Database</b>
 <br>
 <br>
+<b>
 Here is the patients in our database: 
+</b>
 <br>
 <br>
 
