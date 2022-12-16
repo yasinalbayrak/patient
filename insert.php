@@ -7,7 +7,7 @@
 <?php 
 
 include "config.php"; 
-#
+
 
 
 if (!empty($_POST['p_name']) and  !empty($_POST['age']) and !empty($_POST['P_allergicreaction']) and !empty($_POST['p_diagnosis']) and !empty($_POST['p_address'])  and !empty($_POST['gender'])) 
