@@ -15,12 +15,12 @@ if (!empty($_POST['d_name']) and  !empty($_POST['age']) and !empty($_POST['speci
 { 
     $d_name = $_POST['d_name']; 
     $d_age = $_POST['age']; 
-    $specialization= $_POST['specializaiton'];
+    $specialization= $_POST['specialization'];
     $d_salary = $_POST['d_salary']; 
     $d_address = $_POST['d_address']; 
     $d_gender = $_POST['gender']; 
-    $sql_statement = "INSERT into doctors(d_name,age,d_salary,d_address,gender,specialization)
-    VALUES  ('$d_name',$d_age,'$d_salary','$d_address','$d_gender','$specializaiton')"; 
+    $sql_statement = "INSERT into doctors (d_name,age,d_salary,d_address,gender,specialization)
+    VALUES  ('$d_name',$d_age,'$d_salary','$d_address','$d_gender','$specialization')"; 
 
     $result = mysqli_query($hospital_db, $sql_statement);
     if($result == 1)
