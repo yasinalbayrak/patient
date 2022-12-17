@@ -1,0 +1,79 @@
+
+
+<style>
+    
+input[type=submit] {
+  width: 100px;
+  background-color: rgb(96, 187, 187);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  border: 2px solid #0a0909;
+}
+
+input[type=submit]:hover {
+  background-color: #745df5;
+}
+
+.btn{
+    width: 100px;
+  background-color: rgb(255, 93, 193);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  
+  border: 2px solid #0a0909;
+   
+    
+}
+.container{
+    text-align: center;
+    align-items: center;
+    height: 50px;
+}
+.btn:hover{
+    background-color: #745df5;
+}
+
+.btn a{
+    text-align: center;
+    text-decoration: none;
+    
+}
+</style>
+
+
+<form action="insert_hospital.php" method="POST" accept-charset="utf-8"> 
+    
+    <body style = "text-align: center;font-style:italic;background-color: rgb(96, 187, 187);background-image:url('pht.jpg'); background-attachment: fixed;
+    background-size: 100% 100%;">
+        <br><br><h3 style="color: rgb(6, 123, 248);text-shadow:3px 3px rgb(96, 187, 187);font-weight: 1000;font-size: 40;padding-bottom:0px;">Insert the hospital</h3>
+        Hospital Name:
+    <br><input type="text" id="hospital_name" name="hospital_name"> 
+    
+    
+    
+   
+    
+        <br><br>Hospital's Room Count:
+        <br><input type="text" id="room_number" name="room_number"> 
+        
+
+    
+    
+      
+
+          <br><br><br><input type="submit" value="Submit"> <br> <br><br> <br>
+          <p1 class="container">
+          <p2 class="btn"><a href="#">insert a branch </a></p2>
+          </p1>
+    </body>
+
+</form>
