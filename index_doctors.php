@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hospitals</title>
+	<title>Doctors</title>
 
 <style>
 
@@ -233,7 +233,7 @@ b{
     
     
 <div align="center">
-<b>HOSPITALS IN OUR DATABASE: </b>
+<b>DOCTORS IN OUR DATABASE: </b>
 <br>
 <br>
 <p1>
@@ -244,18 +244,18 @@ b{
 <mybody>
 <div class="container">
 
-  <div class="btn"><a href="insert_hospital.html">insert a hospital </a></button>
+  <div class="btn"><a href="insert_doctor.html">insert a doctor </a></button>
 </div>
 
-  <div class="btn"><a href="admin_hospitals.php">delete a hospital </a></button>
+  <div class="btn"><a href="admin_doctor.php">delete a doctor </a></button>
 </div>
 
-  <div class="btn"><a href="select_hospital.php">filter a hospital </a></button>
+  <div class="btn"><a href="select_doctor.php">filter a doctor </a></button>
 </div>
 </div>
 </mybody>
 <?php 
-include "hospitals.php";
+include "doctors.php";
 ?>
 
 
