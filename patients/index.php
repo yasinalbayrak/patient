@@ -71,17 +71,18 @@ input[type=submit]:hover {
   cursor: pointer;
 
 }
-div {
+div.outer {
   border-radius: 2px;
   background-color: #f2f2f2;
   background-image:url('pht.jpg');
-  padding: 1px;
+  padding: 3px;
   background-attachment: fixed;
   background-size: 100% 100%;
-  
+  height: 100%;
 }
 body{
     margin:0px;
+    height: 100%;
     
 }
 b{
@@ -232,7 +233,7 @@ b{
 <body >
     
     
-<div align="center">
+<div class ="outer" align="center">
 <b>PATIENTS IN OUR DATABASE: </b>
 <br>
 <br>

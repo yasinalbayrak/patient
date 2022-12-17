@@ -7,14 +7,14 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  width: 70%;
   
 }
 
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 10px;
   
   
 }
@@ -106,6 +106,8 @@ while($row = mysqli_fetch_assoc($result))
 
 </table>
 </div>
+<br>
+<br>
 
 </body>
 </html>
