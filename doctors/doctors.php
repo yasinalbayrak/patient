@@ -74,7 +74,7 @@ tr.a:hover{
 
 	<table>
 
-<tr> <th> ID </th> <th> NAME </th><th> AGE </th> <th>SALARY</th><th>ADDRESS</th><th>GENDER</th><th>SPECIALIZATION</th></tr> 
+<tr> <th> ID </th> <th> NAME </th><th> AGE </th> <th> ANNUAL SALARY ($)</th><th>ADDRESS</th><th>GENDER</th><th>SPECIALIZATION</th></tr> 
 
 <?php
 
