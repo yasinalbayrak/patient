@@ -79,9 +79,9 @@ input[type=submit]:hover {
   height: 100vh;
 
 }
-body{
-    margin:0px;
-    height: 100%;
+html, body {
+  margin:0px;
+  height: 100%;
 }
 b{
     color: rgb(105, 0, 166);

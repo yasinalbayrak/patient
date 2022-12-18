@@ -1,9 +1,7 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Medicines</title>
+	<title>Nurse Works In</title>
 
 <style>
 
@@ -71,19 +69,21 @@ input[type=submit]:hover {
   cursor: pointer;
 
 }
-div {
+.outer {
   border-radius: 2px;
   background-color: #f2f2f2;
   background-image:url('medcine.jpg');
   padding: 1px;
   background-attachment: fixed;
   background-size: 100% 100%;
-  
+  height: 100%;
+
 }
-body{
-    margin:0px;
-    
+html, body {
+  margin:0px;
+  height: 100%;
 }
+
 b{
     color: rgb(105, 0, 166);
     font-weight: 500px;
@@ -221,7 +221,7 @@ b{
   background: linear-gradient(to bottom, #360049, #350048); /*fiolet*/
 }
 * {
-  
+ 
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
@@ -229,29 +229,26 @@ b{
 
 
 </head>
-<body >
+<body>
     
     
-<div align="center">
+<div class= "outer" align="center">
 <b>MEDICINES IN OUR DATABASE: </b>
 <br>
 <br>
-<p1>
-
-</p1>
 <br>
 <br>
 <mybody>
 <div class="container">
 
   <div class="btn"><a href="insert_medicine.html">insert a medicine </a></button>
-</div>
+  </div>
 
   <div class="btn"><a href="admin_medicine.php">delete a medicine </a></button>
-</div>
+  </div>
 
   <div class="btn"><a href="select_medicine.php">filter a medicine </a></button>
-</div>
+  </div>
 </div>
 </mybody>
 <?php 

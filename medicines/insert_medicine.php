@@ -18,7 +18,7 @@ if (!empty($_POST['mname']) AND !empty($_POST['mtype']) )
 
 
     $sql_statement = "INSERT into medicine(mname,mtype)
-    VALUES  ('$m_name',$m_type)"; 
+    VALUES  ('$m_name','$m_type')"; 
 
     $result = mysqli_query($hospital_db, $sql_statement);
     if($result == 1)
