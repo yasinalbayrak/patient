@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hospitals</title>
+	<title>Works In</title>
 
 <style>
 
@@ -232,7 +232,7 @@ b{
     
     
 <div class="outer" align="center">
-<b>BRANCHES IN OUR DATABASE: </b>
+<b>WORK INFORMATIONS IN OUR DATABASE: </b>
 <br>
 <br>
 
@@ -241,18 +241,18 @@ b{
 <mybody>
 <div class="container">
 
-  <div class="btn"><a href="insert_branch.php">insert a branch </a></button>
+  <div class="btn"><a href="insert_workinfo.php"> Insert new work info </a></button>
 </div>
 
-  <div class="btn"><a href="branch_admin.php">delete a branch </a></button>
+  <div class="btn"><a href="workinfo_admin.php">Delete a work info </a></button>
 </div>
 
-  <div class="btn"><a href="branch_selection.php">filter branches </a></button>
+  <div class="btn"><a href="workinfo_selection.php">Filter work infos</a></button>
     </div>
 </div>
 </mybody>
 <?php 
-include "branches.php";
+include "doctors_works_in.php";
 ?>
 
 
