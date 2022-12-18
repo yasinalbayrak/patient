@@ -49,7 +49,7 @@ tr.a:hover{
 }
 body{
     text-align:center;
-    background-image:url(pht.jpg);background-size: 100% 100%;background-attachment: fixed;
+    background-image:url(ins.jpg);background-size: 100% 100%;background-attachment: fixed;
 }
 h5{
     padding:30px;
@@ -137,7 +137,7 @@ h6{
  
     
     
-    <h5> Filter The Prescribed Info</h5>
+    <h5> Filter The Insurances</h5>
         
          
         

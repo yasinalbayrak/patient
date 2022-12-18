@@ -74,7 +74,7 @@
     }
     body{
         background-color: rgb(96, 187, 187);
-        background-image:url('pht.jpg');
+        background-image:url('ins.jpg');
         background-attachment: fixed;
         background-size: 100% 100%;
         text-align: center;
