@@ -1,114 +1,269 @@
-<form action="select_doctor.php" method="POST" accept-charset="utf-8" target = "_self" > 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doctor</title>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  
+  
+}
+p{
+   text-align:center;
+   padding: 8px;
+   border-radius: 5px;
+  
+    
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+  background-color: #e4e4e4;
+  background-color: #efecec;
+  background-color:#82C3EC;
+  background-color: #e4e4e4;
+  background-color: #efecec;
+}
+tr:nth-child(odd) {
+  background-color: white;
+  
+}
+tr:nth-child(1) {
+  background-color: #76a5af;
+  background-color: rgb(105, 0, 166);
+  color: #82C3EC;
+  font: weight 500px;
+  font-style: italic;
+}
+tr.a:hover{
+  background-color: coral;
+}
+body{
+    text-align:center;
+    background-image:url(pht.jpg);background-size: 100% 100%;background-attachment: fixed;
+}
+h5{
+    padding:30px;
+    color: rgb(6, 123, 248);
+    text-shadow:3px 3px rgb(96, 187, 187);
+    font-weight: 1000;
+    font-size: 50px;
+    padding-bottom:0px;
+}
+h4{
+    color: rgb(6, 123, 248);
+    font-weight:2000;
+    padding:10px;
+}
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.container a {
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  color: #f4f4f4;
+  text-transform: uppercase;
+}
+
+.btn {
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(146, 148, 248, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+h6{
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+    color: red;
+    font-size:19px;
+}
+</style>
+
+</head>
+<body>
+<form action="select_doctor.php" method="POST" accept-charset="utf-8" target = "_self" style="align=center" > 
  
     
-    <body style = ";font-weight:1000;text-align: center;font-style: italic;background-color: rgb(96, 187, 187);margin-top:100px;background-image:url(pht.jpg);background-size: 100% 100%;background-attachment: fixed">
-
-    <h3 style="color: rgb(6, 123, 248);text-shadow:3px 3px rgb(96, 187, 187);font-weight: 1000;font-size: 40;padding-bottom:0px;"> Filter The Doctors</h3>
+    
+    <h5> Filter The Doctors</h5>
         
          
-        Gender:
-        <select name="gender" style = "width: 150px;">
-        <option value="3">All</option>
-        <option value="1">Male</option>
-        <option value="2">Female</option>
         
-        </select>
 
-    Doctor Name:
-    <input type="text" id="d_name" name="d_name" style = "width: 150px;">
     
     
-    <br><br>Address:
-        <input type="text" id="d_address" name="d_address" style = "width: 150px;"> 
-   Specializaiton:
-        <input type="text" id="specializaiton" name="specializaiton" style = "width: 150px;"> 
+    <h4>
 
-    Min Age : 
-        <input type ="text" id = "age_min" name = "age_min" style = "width: 150px;" >    
-    Max Age :
-        <input type ="text" id = "age_max" name = "age_max"  style = "width: 150px;">    
+    DOCTOR NAME:
+        <input type ="text" id = "d_name" name = "d_name"  style = "width: 150px;">
+    MIN SALARY:
+        <input type="text" id="Min_salary" name="Min_salary" style = "width: 150px;"> 
+    MAX SALARY:
+        <input type="text" id="Max_salary" name="Max_salary" style = "width: 150px;"> 
+    
+    MIN AGE:
+        <input type="text" id="Min_age" name="Min_age" style = "width: 150px;"> 
+    MAX AGE:
+        <input type="text" id="Max_age" name="Max_age" style = "width: 150px;"> 
+    <br>
+    ADDRESS:
+        <input type ="text" id = "d_address" name = "d_address"  style = "width: 150px;">    
+    
 
+    GENDER:
+    <select name="gender" style = "width: 150px;">
+    <option value="3">All</option>
+    <option value="1">Male</option>
+    <option value="2">Female</option>  
+    </select>
 
-    Min Salary : 
-        <input type ="text" id = "salary_min" name = "salary_min" style = "width: 150px;" >    
-    Max Salary :
-        <input type ="text" id = "salary_max" name = "salary_max"  style = "width: 150px;"> 
-
+    SPECIALIZATION:
+        <input type ="text" id = "specialization" name = "specialization"  style = "width: 150px;">    
+    
+    
+      </h4>
+ 
     <br><br> <input type="submit" value="Filter"
                 style="background-color:rgb(242, 142, 142);
                 border: 2px solid #0a0909;" >
-                
-
-    </body>
+    
 
 
-<?php 
+</form>
+<div align="center">
 
-include "config.php"; // Makes mysql connection
+	<table>
+
+
+<tr> <th> DOCTOR ID </th> <th> SALARY </th><th> DOCTOR NAME </th><th> AGE </th><th> ADDRESS </th><th> GENDER </th><th> SPECIALIZATION </th></tr> 
+<?php
+
+include "config.php";
 if(!empty($_POST))
 {
-    if (!empty($_POST['d_address']) )
-    {  $address = $_POST['d_address'];}
-    if (!empty($_POST['specialization']) )
-    {  $diagnosis = $_POST['specialization'];}
+
+    
+    if (!empty($_POST['Min_salary']) ) $Min_salary =$_POST['Min_salary'];
+    else  $Min_salary = 0;
+    if (!empty($_POST['Max_salary']) ) $Max_salary =$_POST['Max_salary'];
+    else  $Max_salary = PHP_INT_MAX;
+    if (!empty($_POST['Min_age']) ) $Min_age =$_POST['Min_age'];
+    else  $Min_age = 0;
+    if (!empty($_POST['Max_age']) ) $Max_age =$_POST['Max_age'];
+    else  $Max_age = PHP_INT_MAX;
+    if (!empty($_POST['d_name']) ) $d_name = $_POST['d_name'];
     
     
-    if (!empty($_POST['age_min']) ) $age_min = $_POST['age_min'];
-    else  $age_min = 0;
-    
-    if (!empty($_POST['age_max']) ) $age_max = $_POST['age_max'];
-    else  $age_max = PHP_INT_MAX;
-    
+    if (!empty($_POST['d_address']) ) $d_address = $_POST['d_address'];
     if($_POST['gender'] == 1) $gender = "Man";
     if($_POST['gender'] == 2) $gender = "Woman";
     if($_POST['gender'] == 3) $gender = "All";
-    
-    
-    
-    if (!empty($_POST['d_address']) and (!empty($_POST['specializaition']) and (!empty($_POST['d_salary']) and $gender != "All" )  ))
-        $sql_statement = "SELECT * FROM doctors WHERE gender = '$gender' AND d_salary = '$d_salary' AND specialization = '$specialization'AND age < $age_max AND age > $age_min AND d_address = '$address'";
-    else if(empty($_POST['address']) and  (!empty($_POST['specializaiton']) ))
+    if (!empty($_POST['specialization']) ) $specialization = $_POST['specialization'];
+
+
+
+    if(!empty($_POST['specialization']) and !empty($_POST['d_name']) )
     {
-        if(!empty($_POST['d_salary']) and $gender != "All")
-            $sql_statement = "SELECT * FROM doctors WHERE gender = '$gender' AND d_salary = '$d_salary' AND specializaiton = '$specializaiton'AND age <= $age_max AND age >= $age_min ";
-        else if (!empty($_POST['d_salary']) and $gender != "All")
-            $sql_statement = "SELECT * FROM doctors WHERE gender = '$gender' AND specialization = '$specialization'AND age <= $age_max AND age >= $age_min ";
-        else if(!empty($_POST['d_salary']) and $gender == "All")
-            $sql_statement = "SELECT * FROM doctors WHERE gender = '$gender' AND specialization = '$specialization' AND  d_salary = '$d_salary' AND age <= $age_max AND age >= $age_min ";
-        else
-            $sql_statement = "SELECT * FROM doctors WHERE specialization = '$specialization' AND age <= $age_max AND age >= $age_min ";
-            
+        if(!empty($_POST['d_address']) and $gender != "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE specialization = '$specialization' AND d_name = '$d_name' AND gender = '$gender' AND d_address = '$d_address'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+        else if(!empty($_POST['d_address']) and $gender = "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE specialization = '$specialization' AND d_name = '$d_name' AND d_address = '$d_address'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+        else if(empty($_POST['d_address']) and $gender != "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE specialization = '$specialization' AND d_name = '$d_name'AND gender = '$gender'AND  age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+        else if(empty($_POST['d_address']) and $gender = "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE specialization = '$specialization' AND d_name = '$d_name'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+    }
+         
+    else if (empty($_POST['d_name']) and !empty($_POST['specialization']) )
+    {
+        if(!empty($_POST['d_address']) and $gender != "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE specialization = '$specialization'  AND gender = '$gender' AND d_address = '$d_address'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+        else if(!empty($_POST['d_address']) and $gender = "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE specialization = '$specialization'  AND d_address = '$d_address'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+        else if(empty($_POST['d_address']) and $gender != "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE specialization = '$specialization' AND gender = '$gender' AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary ";
+        else if(empty($_POST['d_address']) and $gender = "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE specialization = '$specialization'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
     }
         
-    else if(empty($_POST['specializaiton']) and !empty($_POST['d_address']))
+    else if (!empty($_POST['d_name']) and empty($_POST['specialization']) )
     {
-        if($allergicreaction != "All" and $gender != "All")
-            $sql_statement = "SELECT * FROM doctors WHERE gender = '$gender' AND P_allergicreaction = '$allergicreaction'AND age <= $age_max AND age >= $age_min AND d_address = '$address'";
-        else if ($allergicreaction == "All" and $gender != "All")
-            $sql_statement = "SELECT * FROM doctors WHERE gender = '$gender' AND age <= $age_max AND age >= $age_min AND d_address = '$address'";
-        else if($allergicreaction != "All" and $gender == "All")
-            $sql_statement = "SELECT * FROM doctors WHERE P_allergicreaction = '$allergicreaction' AND age <= $age_max AND age >= $age_min AND p_address = '$address'";
-        else
-            $sql_statement = "SELECT * FROM doctors WHERE age <= $age_max AND age >= $age_min AND d_address = '$address' ";
+        if(!empty($_POST['d_address']) and $gender != "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE d_name = '$d_name'  AND gender = '$gender' AND d_address = '$d_address'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+        else if(!empty($_POST['d_address']) and $gender = "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE d_name = '$d_name'  AND d_address = '$d_address'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+        else if(empty($_POST['d_address']) and $gender != "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE d_name = '$d_name' AND gender = '$gender'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary ";
+        else if(empty($_POST['d_address']) and $gender = "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE d_name = '$d_name'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary ";
     }
-    else
+        
+    else if ((empty($_POST['d_name']) and empty($_POST['specialization']) ))
     {
-        if($allergicreaction != "All" and $gender != "All")
-            $sql_statement = "SELECT * FROM doctors WHERE gender = '$gender' AND P_allergicreaction = '$allergicreaction'AND age <= $age_max AND age >= $age_min";
-        else if ($allergicreaction == "All" and $gender != "All")
-            $sql_statement = "SELECT * FROM doctors WHERE gender = '$gender' AND age <= $age_max AND age >= $age_min ";
-        else if($allergicreaction != "All" and $gender == "All")
-            $sql_statement = "SELECT * FROM doctors WHERE P_allergicreaction = '$allergicreaction' AND age <= $age_max AND age >= $age_min" ;
-        else
-            $sql_statement = "SELECT * FROM doctors WHERE age <= $age_max AND age >= $age_min ";
-    
+        if(!empty($_POST['d_address']) and $gender != "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE  gender = '$gender' AND d_address = '$d_address'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+        else if(!empty($_POST['d_address']) and $gender = "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE  d_address = '$d_address'AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+        else if(empty($_POST['d_address']) and $gender != "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE  gender = '$gender' AND age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
+        else if(empty($_POST['d_address']) and $gender = "All" )
+            $sql_statement = "SELECT * FROM doctors WHERE  age <= $Max_age AND age >= $Min_age AND d_salary <= $Max_salary AND d_salary >= $Min_salary";
     }
     
-    
-    $result = mysqli_query($hospital_db, $sql_statement); // Executing query
-    
-    
-    
+ 
+    $result = mysqli_query($hospital_db, $sql_statement);
     if (mysqli_num_rows($result) == 0)
     {
         echo "<h3 style='color: rgb(105, 0, 166);font-weight: 500;font-size: 20;padding-bottom:0px;'>". "Filtered Data:."."</h3>";
@@ -116,26 +271,32 @@ if(!empty($_POST))
     }
     else  
     {
-        echo "<h3 style='color: rgb(105, 0, 166);font-weight: 500;font-size: 20;padding-bottom:0px;'>". "Filtered Data:."."</h3>";
+        echo "<h3 style='color: rgb(105, 0, 166);font-weight: 500;font-size: 20;padding-bottom:0px;'>". "Filtered Data:"."</h3>";
     }    
-
-    while($row = mysqli_fetch_assoc($result)) { // Iterating the result
-        $d_id = $row['d_id']; 
-        #$patient_name  = iconv('UTF-8', 'ASCII//TRANSLIT', $row['p_name']);
-        $doctor_name = $row['d_name'];
-        $age = $row['age']; 
-        $allergy = $row['P_allergicreaction']; 
-        $diagnosis = $row['p_diagnosis']; 
-        $address = $row['p_address']; 
-        $gender = $row['gender']; 
-        echo $d_id . " " . $doctor_name . " " . $age . " ".$allergy . " " .$diagnosis . " " .$address . " " .$gender . "<br>"; 
+    while($row = mysqli_fetch_assoc($result)){
+        $d_id = $row['d_id'];
+        $salary = $row['d_salary']; 
+        $d_name = $row['d_name'];
+        $age = $row['age'];
+        $d_address = $row['d_address'];
+        $gender = $row['gender'];
+        $specialization = $row['specialization'];
+        echo "<tr class='a'>" . "<th>" . $d_id . "</th>"  . "<th>" . $salary ."</th>" . "<th>" . $d_name . "</th>". "<th>" . $age . "</th>". "<th>" . $d_address . "</th>" . "<th>" . $gender . "</th>". "<th>" . $specialization . "</th></tr>" ;          
     }
-
-}
+}       
 
 
 
 
 ?>
-</form>
 
+</table>
+
+<div class="container">
+      <a href="index_doctors.php" class="btn">Go back to main page</a>
+    </div>
+
+</div>
+
+</body>
+</html>
