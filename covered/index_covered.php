@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Insurance</title>
+	<title>Covering</title>
 
 <style>
 
@@ -72,7 +72,7 @@ input[type=submit]:hover {
 .outer {
   border-radius: 2px;
   background-color: #f2f2f2;
-  background-image:url('ins.jpg');
+  background-image:url('pht.jpg');
   padding: 1px;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -232,7 +232,7 @@ b{
     
     
 <div class="outer" align="center">
-<b>INSURANCES IN OUR DATABASE: </b>
+<b>INSURANCE POLICY COVERS' INFORMATIONS IN OUR DATABASE: </b>
 <br>
 <br>
 
@@ -241,18 +241,18 @@ b{
 <mybody>
 <div class="container">
 
-  <div class="btn"><a href="insert_insurance.php"> Insert new insurance </a></button>
+  <div class="btn"><a href="insert_covered.php"> Insert new covering policy </a></button>
 </div>
 
-  <div class="btn"><a href="insurance_admin.php">Delete a insurance </a></button>
+  <div class="btn"><a href="covered_admin.php">Delete a covering policy </a></button>
 </div>
 
-  <div class="btn"><a href="insurance_selection.php">Filter insurances</a></button>
+  <div class="btn"><a href="covered_selection.php">Filter covering policies</a></button>
     </div>
 </div>
 </mybody>
 <?php 
-include "insurances.php";
+include "covers.php";
 ?>
 
 
