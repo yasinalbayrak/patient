@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Prescribed</title>
+	<title>Insurance</title>
 
 <style>
 table {
@@ -133,7 +133,7 @@ h6{
 
 </head>
 <body>
-<form action="prescribed_selection.php" method="POST" accept-charset="utf-8" target = "_self" style="align=center" > 
+<form action="insurance_selection.php" method="POST" accept-charset="utf-8" target = "_self" style="align=center" > 
  
     
     
@@ -145,30 +145,19 @@ h6{
     
     
     <h4>
-    MIN PATIENT ID:
+    MIN POLICY ID:
         <input type="text" id="MINp_id" name="MINp_id" style = "width: 150px;"> 
-    MAX PATIENT ID:
+    MAX POLICY ID:
         <input type="text" id="MAXp_id" name="MAXp_id" style = "width: 150px;"> 
     
-    MIN MEDICINE CODE:
-        <input type="text" id="MINm_code" name="MINm_code" style = "width: 150px;"> 
-    MAX MEDICINE CODE:
-        <input type="text" id="MAXm_code" name="MAXm_code" style = "width: 150px;"> 
-      
-    <br>
-   
-    MIN TIME IN DAYS: 
-        <input type ="text" id = "min_tid" name = "min_tid"  style = "width: 150px;">    
-    MAX TIME IN DAYS: 
-        <input type ="text" id = "max_tid" name = "max_tid"  style = "width: 150px;">    
+
     
-      
+    Insurance type:
+        <input type ="text" id = "Ins_type" name = "Ins_type"  style = "width: 150px;">    
+    
 
-
-    MIN PRESCRIBED NUMBER:
-        <input type ="text" id = "min_pres_no" name = "min_pres_no"  style = "width: 150px;">    
-    MAX PRESCRIBED NUMBER:
-        <input type ="text" id = "max_pres_no" name = "max_pres_no"  style = "width: 150px;">    
+    Insurance company:
+        <input type ="text" id = "Ins_company" name = "Ins_company"  style = "width: 150px;">    
     
     
       </h4>
@@ -185,7 +174,7 @@ h6{
 	<table>
 
 
-<tr> <th> PATIENT ID </th> <th> MEDICINE CODE </th><th> TIME IN DAYS </th><th> PRESCRIBED NUMBER </th></tr> 
+<tr> <th> POLICY ID </th> <th> INSURANCE TYPE </th><th> INSURANCE COMPANY </th></tr> 
 <?php
 
 include "config.php";
@@ -198,41 +187,38 @@ if(!empty($_POST))
     if (!empty($_POST['MAXp_id']) ) $MAXp_id =$_POST['MAXp_id'];
     else  $MAXp_id = PHP_INT_MAX;
 
-    if (!empty($_POST['MINm_code']) ) $MINm_code = $_POST['MINm_code'];
-    else  $MINm_code = 0;
+    if (!empty($_POST['Ins_type']) ) $Ins_type = $_POST['Ins_type'];
     
-    if (!empty($_POST['MAXm_code']) ) $MAXm_code = $_POST['MAXm_code'];
-    else  $MAXm_code = PHP_INT_MAX;
+    
+    if (!empty($_POST['Ins_company']) ) $Ins_company = $_POST['Ins_company'];
+    
 
 
 
-    if (!empty($_POST['min_tid']) ) $min_tid = $_POST['min_tid'];
-    else  $min_tid = 0;
     
-    if (!empty($_POST['max_tid']) ) $max_tid = $_POST['max_tid'];
-    else  $max_tid = PHP_INT_MAX;
-    
-    if (!empty($_POST['min_pres_no']) ) $min_pres_no = $_POST['min_pres_no'];
-    else  $min_pres_no = 0;
-    
-    if (!empty($_POST['max_pres_no']) ) $max_pres_no = $_POST['max_pres_no'];
-    else  $max_pres_no = PHP_INT_MAX;
-
-    
-    
-    $sql_statement = "SELECT * FROM prescribed WHERE 
-
-        p_id <= $MAXp_id 
-        AND p_id >= $MINp_id
-        AND m_code <= $MAXm_code 
-        AND m_code >= $MINm_code
-        AND time_indays <= $max_tid
-        AND time_indays >= $min_tid
-        AND pres_no <= $max_pres_no
-        AND pres_no >= $min_pres_no
+    if(!empty($_POST['Ins_type']) AND !empty($_POST['Ins_company']) )
+        $sql_statement = "SELECT * FROM insurance 
+        WHERE Ins_company = '$Ins_company' AND Ins_type = '$Ins_type'
+        AND policy_id <= $MAXp_id 
+        AND policy_id >= $MINp_id
         ";
-
-    
+    else if(!empty($_POST['Ins_type'])) 
+    {
+      $sql_statement = "SELECT * FROM insurance WHERE Ins_type = '$Ins_type'
+       AND policy_id <= $MAXp_id 
+       AND policy_id >= $MINp_id";
+    }
+    else if (!empty($_POST['Ins_company']))
+    {
+      $sql_statement = "SELECT * FROM insurance WHERE Ins_company = '$Ins_company'
+      AND policy_id <= $MAXp_id 
+       AND policy_id >= $MINp_id";
+    }
+    else{ // both blank
+      $sql_statement = "SELECT * FROM insurance WHERE  
+      policy_id <= $MAXp_id 
+       AND policy_id >= $MINp_id";
+    }
  
     $result = mysqli_query($hospital_db, $sql_statement);
     if (mysqli_num_rows($result) == 0)
@@ -245,14 +231,13 @@ if(!empty($_POST))
         echo "<h3 style='color: rgb(105, 0, 166);font-weight: 500;font-size: 20;padding-bottom:0px;'>". "Filtered Data:"."</h3>";
     }    
     while($row = mysqli_fetch_assoc($result)){
-        $docid = $row['p_id'];
+        $docid = $row['policy_id'];
         
-        $bcode = $row['m_code']; 
-        $hospid = $row['time_indays'];
-        $since = $row['pres_no']; 
+        $bcode = $row['Ins_type']; 
+        $hospid = $row['Ins_company'];
+       
     
-        echo "<tr class='a'>" . "<th>" . $docid . "</th>"  . "<th>" . $bcode ."</th>" . "<th>" . $hospid ."</th>" . 
-        "<th>" . $since . "</th> </tr>" ;          
+        echo "<tr class='a'>" . "<th>" . $docid . "</th>"  . "<th>" . $bcode ."</th>" . "<th>" . $hospid . "</th> </tr>" ;          
     }
 }       
 
@@ -264,7 +249,7 @@ if(!empty($_POST))
 </table>
 
 <div class="container">
-      <a href="index_prescribed.php" class="btn">Go back to main page</a>
+      <a href="index_insurance.php" class="btn">Go back to main page</a>
     </div>
 
 </div>
