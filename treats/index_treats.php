@@ -247,7 +247,7 @@ b{
   <div class="btn"><a href="admin_treat.php">delete a treatment </a></button>
   </div>
 
-  <div class="btn"><a href="select_treat.php">filter a treatment </a></button>
+  <div class="btn"><a href="select_treatment.php">filter a treatment </a></button>
   </div>
 </div>
 </mybody>
