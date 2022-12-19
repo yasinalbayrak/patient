@@ -74,7 +74,7 @@ input[type=submit]:hover {
 div {
   border-radius: 2px;
   background-color: #f2f2f2;
-  background-image:url('pht.jpg');
+  background-image:url('nurse.jpg');
   padding: 1px;
   background-attachment: fixed;
   background-size: 100% 100%;

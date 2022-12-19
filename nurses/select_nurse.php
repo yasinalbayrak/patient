@@ -49,7 +49,7 @@ tr.a:hover{
 }
 body{
     text-align:center;
-    background-image:url(pht.jpg);background-size: 100% 100%;background-attachment: fixed;
+    background-image:url(nurse.jpg);background-size: 100% 100%;background-attachment: fixed;
 }
 h5{
     padding:30px;

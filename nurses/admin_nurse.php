@@ -5,7 +5,7 @@ include "config.php";
 ?>
 
 <form action="delete_nurse.php" method="POST">
-<body style = "text-align: center;font-style:italic;background-color: rgb(96, 187, 187);background-image:url('pht.jpg'); background-attachment: fixed;
+<body style = "text-align: center;font-style:italic;background-color: rgb(96, 187, 187);background-image:url('nurse.jpg'); background-attachment: fixed;
     background-size: 100% 100%;">
         <br><br><br><br><br><br><br><br><br><br><h3 style="color: rgb(6, 123, 248);text-shadow:3px 3px rgb(96, 187, 187);font-weight: 1000;font-size: 40;padding-bottom:0px;">Delete the nurses</h3>
 <select name="ids">
