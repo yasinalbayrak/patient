@@ -186,7 +186,7 @@ h6{
 	<table>
 
 
-<tr> <th> NURSE ID </th> <th> SALARY </th><th> NURSE NAME </th><th> AGE </th><th> ADDRESS </th><th> GENDER </th></tr> 
+<tr> <th> NURSE ID </th> <th> ANNUAL SALARY ($)</th><th> NURSE NAME </th><th> AGE </th><th> ADDRESS </th><th> GENDER </th></tr> 
 <?php
 
 include "config.php";

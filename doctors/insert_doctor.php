@@ -1,6 +1,5 @@
 
 
-
 <body style = 'background-color:  #DBF9FC;color: black;font-weight: 2000;font-style: italic;font-size: 20;text-align:left;'>
 
 
@@ -26,24 +25,27 @@ if (!empty($_POST['d_name']) and  !empty($_POST['age']) and !empty($_POST['speci
     if($result == 1)
     {
         echo "Succesfully inserted the doctor: ". $d_name. "<br>";
+        $newURL = "index_doctors.php";
+        header( "refresh:2;url=".$newURL );
     }
     else
     {
         //echo "<h3 style='color: rgb(105, 0, 166);font-weight: 500;font-size: 20;padding-bottom:0px;'>". "Filtered Data:."."</h3>";
         echo "Problem occurred while inserting." ;
+        $newURL = "insert_doctor.html";
+        echo "<Br>You are redirecting to the insertion page..." ;
+        header( "refresh:5;url=".$newURL );
     }
+
+    } 
+    else 
+    {
     $newURL = "insert_doctor.html";
-    echo "<Br>You are redirecting to the insertion page..." ;
-    header( "refresh:5;url=".$newURL );
-} 
-else 
-{
-    $newURL = "insert_doctor.html";
-    
+
     echo "Missing information. Please fill in all of the blanks." ."<Br><Br><Br><Br>".  "You are redirecting to the insertion page..." ;
     header( "refresh:5;url=".$newURL );
 
-}
+    }
 
 ?>
 </body>

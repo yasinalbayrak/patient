@@ -1,9 +1,52 @@
-<form action="insert_nurse.php" method="POST" accept-charset="utf-8"> 
+
+
+
+<style>
     
-    <body style = "text-align: center;font-style:italic;background-color: rgb(96, 187, 187);background-image:url('nurse.jpg'); background-attachment: fixed;
-    background-size: 100% 100%;">
-        <br><br><h3 style="color: rgb(6, 123, 248);text-shadow:3px 3px rgb(96, 187, 187);font-weight: 1000;font-size: 40;padding-bottom:0px;">Insert the nurses</h3>
-    Nurse Name:
+    input[type=submit] {
+      width: 100px;
+      background-color: rgb(96, 187, 187);
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      
+      border: 2px solid #0a0909;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #745df5;
+    }
+    
+    
+       
+        
+    
+    .container{
+        text-align: center;
+        align-items: center;
+        height: 50px;
+    }
+    .btn:hover{
+        background-color: #745df5;
+    }
+    
+    .btn a{
+        text-align: center;
+        text-decoration: none;
+        
+    }
+    </style>
+    
+    
+    <form action="insert_nurse.php" method="POST" accept-charset="utf-8"> 
+        
+        <body style = "text-align: center;font-style:italic;background-color: rgb(96, 187, 187);background-image:url('nurse.jpg'); background-attachment: fixed;
+        background-size: 100% 100%;">
+            <br><br><h3 style="color: rgb(6, 123, 248);text-shadow:3px 3px rgb(96, 187, 187);font-weight: 1000;font-size: 40;padding-bottom:0px;">Insert the nurse</h3>
+            Nurse Name:
     <br><input type="text" id="n_name" name="n_name"> 
     <br><br>Nurse Age:
     <br><input type="text" id="age" name="age">
@@ -15,12 +58,12 @@
     <br><br>Gender: <select name="gender">
          <option value="Man">Male</option>
         <option value="Woman">Female</option></select>
-      
+        
+            
     
-
-    <br><br><br><input type="submit" value="Submit"
-        style="background-color:rgb(142, 205, 242);
-                border: 2px solid #0a0909;">
-
-
-</form>
+              <br><br><br><input type="submit" value="Submit"> <br> <br><br> <br>
+              
+        </body>
+    
+    </form>
+    

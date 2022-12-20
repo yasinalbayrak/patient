@@ -187,7 +187,7 @@ h6{
 	<table>
 
 
-<tr> <th> DOCTOR ID </th> <th> SALARY </th><th> DOCTOR NAME </th><th> AGE </th><th> ADDRESS </th><th> GENDER </th><th> SPECIALIZATION </th></tr> 
+<tr> <th> DOCTOR ID </th> <th> ANNUAL SALARY ($)</th><th> DOCTOR NAME </th><th> AGE </th><th> ADDRESS </th><th> GENDER </th><th> SPECIALIZATION </th></tr> 
 <?php
 
 include "config.php";
