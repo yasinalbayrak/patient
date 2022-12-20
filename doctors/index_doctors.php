@@ -258,7 +258,13 @@ b{
 include "doctors.php";
 ?>
 
+<div class="container">
 
+<div class="btn"><a href="http://localhost/patient/main/main.php">Go to main page </a></button>
+    </div>
+    </div>
+
+</div>
 </div>
 </body>
 </html>
