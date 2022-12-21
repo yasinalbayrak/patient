@@ -230,6 +230,9 @@ ol {
   .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(9) {
     transition-delay: 1.225s, 1.35s;
   }
+  .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(9) .menu-item:nth-of-type(1) {
+    transition-delay: 1.225s, 1.35s;
+  }
   .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(10) {
     transition-delay: 1.275s, 1.35s;
   }

@@ -240,7 +240,11 @@ article {
       </ol>
     </li>
     <li class="menu-item"><a class = "nav" href="http://localhost/patient/insurance/index_insurance.php">Insurance</a></li>
-    <li class="menu-item"><a  class = "nav"href="http://localhost/patient/treats/index_treats.php">Treatments</a></li>
+      <ol class="sub-menu">
+        <li class="menu-item"><a  class = "nav"href="http://localhost/patient/covered/index_covered.php">Covered</a></li>
+      </ol>
+    <li class="menu-item"><a  class = "nav"href="http://localhost/patient/treats/index_treats.php">Treatments</a></li> 
+    
   </ol>
 </nav>
 
