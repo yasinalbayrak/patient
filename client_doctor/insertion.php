@@ -10,12 +10,12 @@ include "config.php";
 
 
 
-if (!empty($_POST['d_id']) AND isset($_POST['p_id'])  and (! empty($_POST['since']) and isset($_POST['since'])) and (! empty($_POST['until']) and isset($_POST['until'])) ) 
+if (!empty($_POST['d_id']) AND isset($_POST['p_id'])  AND isset($_POST['med_id'])  and (! empty($_POST['since']) and isset($_POST['since'])) and (! empty($_POST['until']) and isset($_POST['until'])) ) 
 { 
     
     $docid = $_POST['d_id'];
     $p_id = $_POST['p_id'];
-    
+    $mcode = $_POST['med_id'];
     
     
     $since = date('Y-m-d', strtotime($_POST['since']));

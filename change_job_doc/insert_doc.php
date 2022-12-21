@@ -1,6 +1,3 @@
-
-
-
 <body style = 'background-color:  #DBF9FC;color: black;font-weight: 2000;font-style: italic;font-size: 20;text-align:left;'>
 
 
@@ -19,7 +16,7 @@ if (
  and isset($_POST['date'])  ) 
 { 
     
-    $n_id = $_POST['d_id'];
+    $d_id = $_POST['d_id'];
     
     $hospital_id = $_POST['hospital_id'];
      
@@ -36,11 +33,11 @@ if (
 
 //Notice: Undefined variable: result in C:\xampp\htdocs\patient\change_job\insertion.php on line 44
 
-    $sql_statement1 = "INSERT into doctors_worksin(d_id,branch_code,hospital_id,since,until)
+    $sql_statement1 = "INSERT into doctor_worksin(d_id,branch_code,hospital_id,since,until)
     VALUES  ($d_id,$branch_codenew,$hospital_idnew,'$date',NULL)";
     $result1 = mysqli_query($hospital_db, $sql_statement1);
 
-    $sql_statement2 = "UPDATE doctors_worksin SET until = '$date' 
+    $sql_statement2 = "UPDATE doctor_worksin SET until = '$date' 
     WHERE d_id= $d_id and branch_code = $branch_code  and hospital_id = $hospital_id ";
     
     
