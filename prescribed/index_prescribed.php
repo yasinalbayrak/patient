@@ -241,13 +241,13 @@ b{
 <mybody>
 <div class="container">
 
-  <div class="btn"><a href="insert_preinfo.php"> Insert new work info </a></button>
+  <div class="btn"><a href="insert_preinfo.php"> Insert prescription </a></button>
 </div>
 
-  <div class="btn"><a href="prescribed_admin.php">Delete a work info </a></button>
+  <div class="btn"><a href="prescribed_admin.php">Delete a prescription </a></button>
 </div>
 
-  <div class="btn"><a href="prescribed_selection.php">Filter work infos</a></button>
+  <div class="btn"><a href="prescribed_selection.php">Filter prescriptions</a></button>
     </div>
 </div>
 </mybody>

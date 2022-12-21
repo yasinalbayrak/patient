@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Working In</title>
+	<title>Prescription</title>
 
 <style>
 table {

@@ -207,10 +207,10 @@ if(!empty($_POST))
     if (!empty($_POST['MAXhospital_id']) ) $MAXhospital_id = $_POST['MAXhospital_id'];
     else  $MAXhospital_id = PHP_INT_MAX;
     
-    if (!empty($_POST['MINbranch_code']) ) $MINbranch_code = $_POST['MINbranch_code'];
+    if (!empty($_POST['min_bcode']) ) $MINbranch_code = $_POST['min_bcode'];
     else  $MINbranch_code = 0;
     
-    if (!empty($_POST['MAXbranch_code']) ) $MAXbranch_code = $_POST['MAXbranch_code'];
+    if (!empty($_POST['max_bcode']) ) $MAXbranch_code = $_POST['max_bcode'];
     else  $MAXbranch_code = PHP_INT_MAX;
      /*if((string)$since <= (string)$until)
      {

@@ -33,7 +33,7 @@ if (isset($_POST['p_id']) and isset($_POST['med_id'])  )
     $result = mysqli_query($hospital_db, $sql_statement);
     if($result == 1)
     {
-        echo "Succesfully inserted the working info of: ". $docid. "<br>";
+        echo "Succesfully inserted the prescription info of: ". $docid. "<br>";
         $newURL = "index_prescribed.php";
         header( "refresh:2;url=".$newURL );
     }

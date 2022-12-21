@@ -79,7 +79,7 @@ input[type=submit]:hover {
   height: 100%;
 
 }
-html, body {
+body {
   margin:0px;
   height: 100%;
 }

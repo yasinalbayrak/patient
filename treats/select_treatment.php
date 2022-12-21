@@ -139,9 +139,9 @@ input[type=submit]:hover {
     
     <h4>
    Since:
-        <input type="text" id="since" name="since" style = "width: 150px;"> 
+        <input type="date" id="since" name="since" style = "width: 150px;"> 
     Until: 
-        <input type ="text" id = "until" name = "until" style = "width: 150px;" >    
+        <input type ="date" id = "until" name = "until" style = "width: 150px;" >    
     Doctor ID: 
         <input type ="text" id = "d_id" name = "d_id" style = "width: 150px;" >
     

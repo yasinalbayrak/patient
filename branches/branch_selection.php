@@ -145,6 +145,7 @@ input[type=submit]:hover {
        
     LOCATION: 
         <input type ="text" id = "location" name = "location" style = "width: 150px;" >    
+        <br><br>
     MIN BRANCH CODE:
         <input type ="text" id = "MINbranch_code" name = "MINbranch_code"  style = "width: 150px;">    
     MAX BRANCH CODE:
