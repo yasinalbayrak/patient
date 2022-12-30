@@ -165,11 +165,11 @@ ol {
      background: #0ae915;
  }
  .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(9) {
-    border-color: #44058b;
+    border-color: #a173d4;
  }
  .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(9) a[href]:after 
  {
-     background: #44058b;
+     background: #a173d4;
  }
  .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(10) {
     border-color: #07e3eb;
@@ -178,7 +178,13 @@ ol {
  {
      background: #07e3eb;
  }
-
+ .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(11) {
+    border-color: #d0fc0d;
+ }
+ .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(11) a[href]:after 
+ {
+     background: #d0fc0d;
+ }
 
 
 
@@ -233,8 +239,17 @@ ol {
   .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(9) .menu-item:nth-of-type(1) {
     transition-delay: 1.225s, 1.35s;
   }
+  .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(9) .menu-item:nth-of-type(2) {
+    transition-delay: 1.225s, 1.35s;
+  }
+  .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(9) .menu-item:nth-of-type(3) {
+    transition-delay: 1.225s, 1.35s;
+  }
   .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(10) {
     transition-delay: 1.275s, 1.35s;
+  }
+  .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(11) {
+    transition-delay: 1.325s, 1.35s;
   }
 
 .menu__content > .menu-item {

@@ -56,7 +56,7 @@ article {
     position: relative;
     border-radius: 16px;
     box-shadow: none;
-    background: #fff;
+    background: white;
     transform-origin: center;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
@@ -207,7 +207,7 @@ article {
 <div id = "leftbox">
    
 <nav class="menu">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="my_nav.css">
   <input id ="menu__toggle" type="checkbox" class='menu__toggle'/>
   <label for="menu__toggle" class="menu__toggle-label">
     <svg preserveAspectRatio='xMinYMin' viewBox='0 0 24 24'>
@@ -239,11 +239,16 @@ article {
         <li class="menu-item"><a class = "nav" href="http://localhost/patient/nurses_workin/index_nurses_worksin.php">Nurses'</a></li>
       </ol>
     </li>
-    <li class="menu-item"><a class = "nav" href="http://localhost/patient/insurance/index_insurance.php">Insurance</a></li>
-      <ol class="sub-menu">
-        <li class="menu-item"><a  class = "nav"href="http://localhost/patient/covered/index_covered.php">Covered</a></li>
+    <li class="menu-item"><a class = "nav" href="http://localhost/patient/insurance/index_insurance.php">Insurance</a>
+  
+  <ol class="sub-menu">
+        <li class="menu-item"><a  class = "nav" href="http://localhost/patient/covered/index_covered.php">Covered</a></li>
       </ol>
+  
+  </li>
+      
     <li class="menu-item"><a  class = "nav"href="http://localhost/patient/treats/index_treats.php">Treatments</a></li> 
+    <li class="menu-item"><a  class = "nav"href="http://localhost/patient/rtdb/support.html"> Need Support?</a></li> 
     
   </ol>
 </nav>
